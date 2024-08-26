@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 35</title>
+</head>
+<body>
+    <script>
+
+
+        function Invertir(cadena){
+        let palabras = cadena.split(" ");
+        let PalabraInvertir = palabras.map(palabra => palabra.split("").reverse().join(""));
+        let cadenaInv = PalabraInvertir.join(" ");
+        return cadenaInv;
+        }
+
+        let resutado = Invertir("Hola Mundo");
+        console.log(resutado);
+
+
+    function Contar(texto,pala){
+    let palabra = texto.split(" ");
+    let contador = 0;
+    for (let i = 0; i<palabra.length; i++){
+            if(palabra[i] === pala){
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+
+    let resul = Contar("Hola mundo adios mundo", "mundo");
+    console.log(resul);
+
+
+        function Palindromo(texto){
+        let limpio = texto.replace(/[^a-zA-Z]/g, "").toLowerCase();
+        let textoReves = limpio.split("").reverse().join("");
+        return limpio == textoReves;
+        }
+
+        console.log(Palindromo("salas"))
+
+
+        function Patron(texto, tron) {
+        let re = new RegExp(tron, 'g');
+        let resultado3 = texto.replace(re, "");
+        resultado = resultado3.replace(/\s+/g, " ").trim();
+        return resultado;
+        }
+
+        let resultado4 = Patron("xyz1, xyz2, xyz3, xyz4 xyz5", "xyz");
+        console.log(resultado4);
+    </script>
+</body>
+</html>

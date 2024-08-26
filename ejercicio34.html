@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 34</title>
+</head>
+<body>
+    <script>
+ 
+        function contarCaracteres (input){
+            let texto = input.toString();
+            return texto.length;
+        
+        }
+
+        let texto1 = "hola mundo";
+        let numero= contarCaracteres(texto1);
+        console.log("Numero de caracteres:" + numero);
+
+        let numero1 = 123456;
+        console.log("Numero de caracteres: "+numero1);
+
+        function Recortar(texto, numeroCaracteres){
+        return texto.slice(0,numeroCaracteres);
+        }
+
+        let textoo = "Hola Mundo";
+        let recortar = Recortar(textoo,6);
+        console.log(recortar)
+
+        function ArrayTexto(texto, separador){
+        return texto.split(separador);
+        }
+
+        let texto = "Hola Que Tal";
+        let resultado = ArrayTexto(texto,"");
+        console.log(resultado);
+
+        function RepetirX(texto, num){
+            return texto.repeat(num);
+        }
+
+        let texto2 = "hola Mundo";
+        let resultado2 = RepetirX(texto2,8);
+        console.log(resultado2);
+
+    </script>
+</body>
+</html>
